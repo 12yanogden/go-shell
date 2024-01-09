@@ -12,7 +12,7 @@ func Run(command string, args []string) string {
 	out, err := exec.Command(command, args...).Output()
 
 	if err != nil {
-		fmt.Printf("%s: %s", command, err.Error())
+		fmt.Printf("%s: %s\n", command, err.Error())
 		os.Exit(1)
 	}
 
