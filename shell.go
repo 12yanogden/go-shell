@@ -1,10 +1,10 @@
 package shell
 
 import (
+	"fmt"
 	"os"
 	"os/exec"
 
-	"github.com/12yanogden/errors"
 	"golang.org/x/term"
 )
 
@@ -12,7 +12,8 @@ func Run(command string, args []string) string {
 	out, err := exec.Command(command, args...).Output()
 
 	if err != nil {
-		errors.Scream(err.Error())
+		fmt.Printf("%s: %s", command, err.Error())
+		os.Exit(1)
 	}
 
 	return string(out)
