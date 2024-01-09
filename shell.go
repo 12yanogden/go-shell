@@ -13,6 +13,7 @@ func Run(command string, args []string) string {
 
 	if err != nil {
 		fmt.Printf("%s: %s\n", command, err.Error())
+		fmt.Println(out)
 		os.Exit(1)
 	}
 
