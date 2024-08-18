@@ -1,6 +1,6 @@
-module github.com/12yanogden/shell
+module github.com/12yanogden/go-shell
 
-go 1.21.5
+go 1.23.0
 
 require golang.org/x/term v0.15.0
 
